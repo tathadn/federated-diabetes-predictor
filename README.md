@@ -44,35 +44,35 @@ A full supervised learning pipeline with EDA, preprocessing, model training, and
 ### Exploratory Data Analysis
 
 #### Target Distribution
-![Target Distribution](v1-basic-ml/results/plots/target_distribution.png)
+![Target Distribution](assets/plots/target_distribution.png)
 
 Class imbalance: 84% negative, 16% positive. Addressed using SMOTE oversampling on the training set.
 
 ---
 
 #### Feature Distributions
-![Feature Distributions](v1-basic-ml/results/plots/feature_distributions.png)
+![Feature Distributions](assets/plots/feature_distributions.png)
 
 Histograms with KDE for all 21 features — shows binary, ordinal, and continuous variable types.
 
 ---
 
 #### Correlation Heatmap
-![Correlation Heatmap](v1-basic-ml/results/plots/correlation_heatmap.png)
+![Correlation Heatmap](assets/plots/correlation_heatmap.png)
 
 Pearson correlation matrix. GenHlth, BMI, PhysHlth, and Age show the strongest correlation with the diabetes target.
 
 ---
 
 #### Box Plots (Outlier Detection)
-![Box Plots](v1-basic-ml/results/plots/box_plots.png)
+![Box Plots](assets/plots/box_plots.png)
 
 Box plots for continuous features to identify outliers prior to IQR-based capping.
 
 ---
 
 #### Feature–Target Relationships
-![Feature Target Relationships](v1-basic-ml/results/plots/feature_target_relationships.png)
+![Feature Target Relationships](assets/plots/feature_target_relationships.png)
 
 Mean feature values segmented by diabetes status — highlights which features differ most between classes.
 
@@ -81,17 +81,17 @@ Mean feature values segmented by diabetes status — highlights which features d
 ### Preprocessing
 
 #### Outliers Before Treatment
-![Outliers Before](v1-basic-ml/results/plots/outliers_before.png)
+![Outliers Before](assets/plots/outliers_before.png)
 
 #### Outliers After IQR Capping
-![Outliers After](v1-basic-ml/results/plots/outliers_after.png)
+![Outliers After](assets/plots/outliers_after.png)
 
 Outliers in continuous features (BMI, PhysHlth, MentHlth) capped at IQR boundaries.
 
 ---
 
 #### Class Balance (Before and After SMOTE)
-![Class Balance](v1-basic-ml/results/plots/class_balance.png)
+![Class Balance](assets/plots/class_balance.png)
 
 SMOTE applied only to the training set to avoid data leakage. Test set preserves original distribution.
 
@@ -100,28 +100,28 @@ SMOTE applied only to the training set to avoid data leakage. Test set preserves
 ### Model Evaluation
 
 #### ROC Curves — All Models
-![ROC Curves](v1-basic-ml/results/plots/roc_curves.png)
+![ROC Curves](assets/plots/roc_curves.png)
 
 Overlaid ROC curves for all 4 classifiers. LightGBM and XGBoost lead with AUC ~0.826.
 
 ---
 
 #### Precision–Recall Curves — All Models
-![Precision Recall Curves](v1-basic-ml/results/plots/precision_recall_curves.png)
+![Precision Recall Curves](assets/plots/precision_recall_curves.png)
 
 PR curves highlight model performance on the minority (positive) class — important for imbalanced datasets.
 
 ---
 
 #### Cross-Validation Comparison
-![CV Comparison](v1-basic-ml/results/plots/cv_comparison.png)
+![CV Comparison](assets/plots/cv_comparison.png)
 
 3-fold stratified cross-validation scores across all models. Shows mean ± std for each.
 
 ---
 
 #### Model Comparison — All Metrics
-![Model Comparison](v1-basic-ml/results/plots/model_comparison.png)
+![Model Comparison](assets/plots/model_comparison.png)
 
 Grouped bar chart comparing accuracy, F1 (macro), and ROC-AUC across all four classifiers.
 
@@ -130,16 +130,16 @@ Grouped bar chart comparing accuracy, F1 (macro), and ROC-AUC across all four cl
 ### Confusion Matrices
 
 #### Logistic Regression
-![Confusion Matrix Logistic Regression](v1-basic-ml/results/plots/confusion_matrix_LogisticRegression.png)
+![Confusion Matrix Logistic Regression](assets/plots/confusion_matrix_LogisticRegression.png)
 
 #### Random Forest
-![Confusion Matrix Random Forest](v1-basic-ml/results/plots/confusion_matrix_RandomForest.png)
+![Confusion Matrix Random Forest](assets/plots/confusion_matrix_RandomForest.png)
 
 #### XGBoost
-![Confusion Matrix XGBoost](v1-basic-ml/results/plots/confusion_matrix_XGBoost.png)
+![Confusion Matrix XGBoost](assets/plots/confusion_matrix_XGBoost.png)
 
 #### LightGBM
-![Confusion Matrix LightGBM](v1-basic-ml/results/plots/confusion_matrix_LightGBM.png)
+![Confusion Matrix LightGBM](assets/plots/confusion_matrix_LightGBM.png)
 
 Normalized confusion matrices (row-wise) for all models.
 
@@ -148,30 +148,30 @@ Normalized confusion matrices (row-wise) for all models.
 ### Feature Importance
 
 #### Random Forest (Gini Importance)
-![RF Feature Importance](v1-basic-ml/results/plots/rf_feature_importance.png)
+![RF Feature Importance](assets/plots/rf_feature_importance.png)
 
 #### Random Forest (Alternative View)
-![Feature Importance Random Forest](v1-basic-ml/results/plots/feature_importance_RandomForest.png)
+![Feature Importance Random Forest](assets/plots/feature_importance_RandomForest.png)
 
 #### XGBoost
-![Feature Importance XGBoost](v1-basic-ml/results/plots/feature_importance_XGBoost.png)
+![Feature Importance XGBoost](assets/plots/feature_importance_XGBoost.png)
 
 #### LightGBM
-![Feature Importance LightGBM](v1-basic-ml/results/plots/feature_importance_LightGBM.png)
+![Feature Importance LightGBM](assets/plots/feature_importance_LightGBM.png)
 
 **Top predictors across models:** GenHlth, BMI, Age, HighBP, HighChol, PhysHlth.
 
 ---
 
 ### Learning Curve — LightGBM
-![Learning Curve LightGBM](v1-basic-ml/results/plots/learning_curve_LightGBM.png)
+![Learning Curve LightGBM](assets/plots/learning_curve_LightGBM.png)
 
 Training vs. cross-validation accuracy as a function of training set size. Confirms the model generalizes well with no significant overfitting.
 
 ---
 
 ### Prediction Confidence Distribution
-![Confidence Distribution](v1-basic-ml/results/plots/confidence_distribution.png)
+![Confidence Distribution](assets/plots/confidence_distribution.png)
 
 Distribution of predicted probability scores on the test set. High-confidence predictions dominate for the negative class.
 
