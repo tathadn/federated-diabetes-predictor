@@ -133,3 +133,7 @@ After training, results are saved in `results/`:
 - `results/models/fl_metrics_history.json` — per-round metrics
 - `results/plots/` — convergence curves, comparisons
 - `results/reports/` — V1 vs V2 comparison JSON + CSV
+
+## Tools Used
+
+- [Claude](https://claude.ai) (Anthropic) — AI assistant used during development
